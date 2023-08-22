@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\ProcessoSeletivoPloomesTuneUP.props" />
+</Project>
