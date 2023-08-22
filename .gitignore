@@ -1,0 +1,98 @@
+# C# and .NET
+## User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## Mono Auto Generated Files
+mono_crash.*
+
+## Visual Studio Code
+.vscode/
+
+## Rider
+.idea/
+*.sln.iml
+
+## User-specific files
+*.rsuser
+*.sln.docstates
+
+## Mono Auto Generated Files
+mono_crash.*
+
+## Directory-based project format:
+.vscode/
+.idea/
+
+## Files that might appear on external disk
+.vscode/
+
+## Visual Studio IntelliCode
+.vscode/
+
+## Rider
+.idea/
+
+## User-specific files
+*.rsuser
+*.sln.docstates
+
+## Mono Auto Generated Files
+mono_crash.*
+
+# NuGet
+packages/
+*.nupkg
+**/project.lock.json
+**/project.fragment.lock.json
+*.paket/paket.exe
+*.paket/paket.targets
+.paket/paket.exe
+.paket/paket.targets
+paket-files/
+*.paket-files/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+*.sln.iml
+
+# User-specific files
+*.rsuser
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Directory-based project format:
+.vscode/
+.idea/
+
+# Files that might appear on external disk
+.vscode/
+
+# Visual Studio IntelliCode
+.vscode/
+
+# Rider
+.idea/
+
+# User-specific files
+*.rsuser
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
