@@ -30,6 +30,11 @@ namespace ProcessoSeletivoPloomesTuneUP.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("BandName")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
                     b.Property<string>("Genre")
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");

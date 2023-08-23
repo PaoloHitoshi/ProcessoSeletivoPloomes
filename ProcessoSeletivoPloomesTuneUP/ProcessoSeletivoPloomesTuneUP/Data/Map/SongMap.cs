@@ -11,6 +11,7 @@ namespace ProcessoSeletivoPloomesTuneUP.Data.Map
             builder.Property(x => x.Name).IsRequired().HasMaxLength(255);
             builder.Property(x => x.Genre).HasMaxLength(150);
             builder.Property(x => x.Release_Date).IsRequired().HasMaxLength(11);
+            builder.Property(x => x.BandName).IsRequired().HasMaxLength(255);
         }
     }
 }
