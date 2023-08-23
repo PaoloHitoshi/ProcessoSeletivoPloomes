@@ -1,6 +1,6 @@
 # TuneUPAPI
 
-## API de Gerenciamento de Usuários e Músicas de uma Plataforma de Músicas
+## API de Gerenciamento de Usuários e Músicas da Plataforma TuneUP
 
 ## Funcionalidades
 ### 1. Usuário
