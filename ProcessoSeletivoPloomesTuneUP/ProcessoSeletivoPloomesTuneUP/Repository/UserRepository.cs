@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using ProcessoSeletivoPloomesTuneUP.Data;
 using ProcessoSeletivoPloomesTuneUP.Models;
 using ProcessoSeletivoPloomesTuneUP.Repository.Interfaces;
@@ -17,6 +18,15 @@ namespace ProcessoSeletivoPloomesTuneUP.Repository
         public async Task<List<UserModel>> GetAllUsers()
         {
             return await _dbContext.Users.ToListAsync();
+        }
+
+        public async Task<List<UserModel>> GetAllAdultUsers()
+        {
+            var query = "SELECT * FROM Users WHERE DATEDIFF(YEAR, Date_Of_Birth, GETDATE()) >= 18";
+
+            var listOfUsers = _dbContext.Users.FromSqlRaw(query).ToList<UserModel>();
+
+            return listOfUsers;
         }
 
         public async Task<UserModel> GetUserById(int id)

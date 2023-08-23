@@ -25,6 +25,13 @@ namespace ProcessoSeletivoPloomesTuneUP.Controllers
             return Ok(users);
         }
 
+        [HttpGet("adultUsers")]
+        public async Task<ActionResult<List<UserModel>>> GetAllAdultUsers()
+        {
+            List<UserModel> users = await _userRepository.GetAllAdultUsers();
+            return Ok(users);
+        }
+
         [HttpPost]
         public async Task<ActionResult<UserModel>> PostUser([FromBody] UserModel newUser)
         {
