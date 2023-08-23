@@ -17,6 +17,10 @@
 #### e. Cadastrar uma Música na Plataforma
 #### f. Atualizar Informações de uma Música
 #### e. Remover uma Música
+###3. Playlist De Músicas
+####a. Obter Playlist de Música por Id
+####b. Adicionar Música à uma Playlist
+####c. Remover Música de uma Playlist
 
 ## Tecnologias Utilizadas
 
