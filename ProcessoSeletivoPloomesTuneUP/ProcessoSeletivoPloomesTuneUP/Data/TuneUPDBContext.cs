@@ -12,11 +12,13 @@ namespace ProcessoSeletivoPloomesTuneUP.Data
 
         public DbSet<UserModel> Users { get; set; } 
         public DbSet<SongModel> Songs { get; set; }
+        public DbSet<PlaylistModel> Playlist { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new UserMap());
             modelBuilder.ApplyConfiguration(new SongMap());
+            modelBuilder.ApplyConfiguration(new PlaylistMap());
             base.OnModelCreating(modelBuilder);
         }
     }

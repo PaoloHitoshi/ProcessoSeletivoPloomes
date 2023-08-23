@@ -22,6 +22,34 @@ namespace ProcessoSeletivoPloomesTuneUP.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("ProcessoSeletivoPloomesTuneUP.Models.PlaylistModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<int>("SongId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasAlternateKey("UserId", "Id");
+
+                    b.HasIndex("SongId");
+
+                    b.ToTable("Playlist");
+                });
+
             modelBuilder.Entity("ProcessoSeletivoPloomesTuneUP.Models.SongModel", b =>
                 {
                     b.Property<int>("Id")
@@ -88,6 +116,25 @@ namespace ProcessoSeletivoPloomesTuneUP.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("ProcessoSeletivoPloomesTuneUP.Models.PlaylistModel", b =>
+                {
+                    b.HasOne("ProcessoSeletivoPloomesTuneUP.Models.SongModel", "Song")
+                        .WithMany()
+                        .HasForeignKey("SongId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ProcessoSeletivoPloomesTuneUP.Models.UserModel", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Song");
+
+                    b.Navigation("User");
                 });
 #pragma warning restore 612, 618
         }

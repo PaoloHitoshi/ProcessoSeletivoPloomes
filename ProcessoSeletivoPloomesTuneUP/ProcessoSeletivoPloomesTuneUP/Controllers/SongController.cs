@@ -48,7 +48,7 @@ namespace ProcessoSeletivoPloomesTuneUP.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<List<SongModel>>> GetSongById(int id)
+        public async Task<ActionResult<SongModel>> GetSongById(int id)
         {
             SongModel Song = await _songRepository.GetSongById(id);
             return Ok(Song);

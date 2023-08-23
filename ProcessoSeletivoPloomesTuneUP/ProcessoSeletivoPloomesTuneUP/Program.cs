@@ -26,6 +26,7 @@ namespace ProcessoSeletivoPloomesTuneUP
 
             builder.Services.AddScoped<IUserRepository, UserRepository>();
             builder.Services.AddScoped<ISongRepository, SongRepository>();
+            builder.Services.AddScoped<IPlaylistRepository, PlaylistRepository>();
 
             var app = builder.Build();
 
