@@ -23,8 +23,8 @@ namespace ProcessoSeletivoPloomesTuneUP.Repository
 
             var secondParameter = new SqlParameter("@songId", songId);
 
-            _dbContext.Database.ExecuteSqlRaw(query, parameter, secondParameter);
-
+             _dbContext.Database.ExecuteSqlRaw(query, parameter, secondParameter);
+            
             return true;
         }
 

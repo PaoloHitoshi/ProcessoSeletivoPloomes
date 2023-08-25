@@ -39,7 +39,7 @@ namespace ProcessoSeletivoPloomesTuneUP.Repository
 
             if (updateSong == null)
             {
-                throw new Exception($"User ID: {id} not found on database.");
+                throw new Exception($"Song ID: {id} not found on database.");
             }
 
             updateSong.Name = song.Name;
@@ -59,7 +59,7 @@ namespace ProcessoSeletivoPloomesTuneUP.Repository
 
             if (removeSong == null)
             {
-                throw new Exception($"User ID: {id} not found on database.");
+                throw new Exception($"Song ID: {id} not found on database.");
             }
 
             _dbContext.Songs.Remove(removeSong);
